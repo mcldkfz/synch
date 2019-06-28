@@ -1,7 +1,7 @@
 /************************************************************************/
 /* File Name: Operators.c																								*/
-/* Description: Implementation of functions over functions for CML			*/
-/*							Calculates sums, averages and deviations for vectors    */
+/* Description: Implementation of functions over functions for CML      */
+/*  Calculates sums, averages and deviations for vectors                */
 /* Author: Max Contreras - mecontrl@uc.cl																*/
 /* Date: July 17 2016																										*/
 /************************************************************************/
