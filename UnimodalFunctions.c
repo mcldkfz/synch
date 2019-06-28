@@ -1,8 +1,7 @@
 /************************************************************************/
 /* Name: UnimodalFunctions.c						*/
 /* Description: Implementation of Unimodal Functions			*/
-/* Purpose: MSc thesis							*/
-/* Author: Max Lopez							*/
+/* Author: Max Contreras						*/
 /* Date: June 7 2016							*/
 /************************************************************************/
 
