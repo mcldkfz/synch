@@ -1,19 +1,19 @@
 /************************************************************************/
-/* File Name: Operators.c																								*/
+/* File Name: Operators.c						*/
 /* Description: Implementation of functions over functions for CML      */
 /*  Calculates sums, averages and deviations for vectors                */
-/* Author: Max Contreras - mecontrl@uc.cl																*/
-/* Date: July 17 2016																										*/
+/* Author: Max Contreras - mecontrl@uc.cl				*/
+/* Date: July 17 2016							*/
 /************************************************************************/
 
 #include "Operators.h"
 
 /************************************************************************/
-/* Function: OP_Sum																											*/
-/* Input: current node, past states vector, alpha, 											*/
-/*							epsilon, Number of nodes 																*/
-/* Return: double 																											*/
-/* Description: Calculates the sum of the lattice dynamics 							*/
+/* Function: OP_Sum							*/
+/* Input: current node, past states vector, alpha, 			*/
+/*	epsilon, Number of nodes 					*/
+/* Return: double 							*/
+/* Description: Calculates the sum of the lattice dynamics 		*/
 /************************************************************************/
 
 double OP_Sum(int current_node, double *x, double mu, double alpha, int total_number_of_nodes)
