@@ -1,19 +1,19 @@
 /************************************************************************/
-/* Name: Operators.h													*/
-/* Description: Implementation of functions over functions for CML		*/
-/* Purpose: MSc thesis													*/
-/* Author: Max Lopez													*/
-/* Date: July 17 2016													*/
+/* File Name: Operators.c																								*/
+/* Description: Implementation of functions over functions for CML			*/
+/*							Calculates sums, averages and deviations for vectors    */
+/* Author: Max Contreras - mecontrl@uc.cl																*/
+/* Date: July 17 2016																										*/
 /************************************************************************/
 
 #include "Operators.h"
 
 /************************************************************************/
-/* Function: OP_Sum														*/
-/* Input: current node, past states vector, alpha, 						*/
-/*							epsilon, Number of nodes 					*/
-/* Return: double 														*/
-/* Description: Calculates the sum of the lattice dynamics 				*/
+/* Function: OP_Sum																											*/
+/* Input: current node, past states vector, alpha, 											*/
+/*							epsilon, Number of nodes 																*/
+/* Return: double 																											*/
+/* Description: Calculates the sum of the lattice dynamics 							*/
 /************************************************************************/
 
 double OP_Sum(int current_node, double *x, double mu, double alpha, int total_number_of_nodes)
@@ -40,19 +40,19 @@ double OP_Sum(int current_node, double *x, double mu, double alpha, int total_nu
 			denominator_02 = pow(denominator_01,alpha);
 
 			sum = sum + (numerator/denominator_02);
- 
+
 		}
 	}
-		
+
 	return sum;
 }
 
 
 /************************************************************************/
-/* Function: OP_Average													*/
-/* Input: states vector, Number of nodes 								*/
-/* Return: double 									 					*/
-/* Description: Calculates the average of the vector					*/
+/* Function: OP_Average																									*/
+/* Input: states vector, Number of nodes 																*/
+/* Return: double 									 																		*/
+/* Description: Calculates the average of the vector										*/
 /************************************************************************/
 
 double OP_Average(double *x, int total_number_of_nodes)
@@ -66,17 +66,17 @@ double OP_Average(double *x, int total_number_of_nodes)
 	for( m = 0 ; m < total_number_of_nodes ; m++)
 	{
 		average = average + x[m]/all_nodes;
-		
+
 	}
 
 	return average;
 }
 
 /************************************************************************/
-/* Function: OP_Deviation												*/
-/* Input: states vector, number of nodes, average 						*/
-/* Return: double 									 					*/
-/* Description: Calculates the deviation of the vector from the avg		*/
+/* Function: OP_Deviation																								*/
+/* Input: states vector, number of nodes, average 											*/
+/* Return: double 									 																		*/
+/* Description: Calculates the deviation of the vector from the avg			*/
 /************************************************************************/
 
 double OP_Deviation(double *x, int total_number_of_nodes, double vector_average)
@@ -90,7 +90,7 @@ double OP_Deviation(double *x, int total_number_of_nodes, double vector_average)
 
 	for( m = 0 ; m < total_number_of_nodes ; m++)
 	{
-		sum = sum + pow((x[m]-vector_average),2)/all_nodes;	
+		sum = sum + pow((x[m]-vector_average),2)/all_nodes;
 	}
 
 	deviation = sqrt(sum);
@@ -99,12 +99,12 @@ double OP_Deviation(double *x, int total_number_of_nodes, double vector_average)
 }
 
 /************************************************************************/
-/* Function: OP_Sum_Open												*/
-/* Input: current node, past states vector, alpha, 						*/
-/*							epsilon, Number of nodes 					*/
-/* Return: double 														*/
-/* Description: Calculates the sum of the lattice dynamics 				*/
-/*				Opens the sum in 2 terms for the advective model		*/
+/* Function: OP_Sum_Open																								*/
+/* Input: current node, past states vector, alpha, 											*/
+/*							epsilon, Number of nodes 																*/
+/* Return: double 																											*/
+/* Description: Calculates the sum of the lattice dynamics 							*/
+/*				Opens the sum in 2 terms for the advective model							*/
 /************************************************************************/
 
 double OP_Sum_Open(int current_node, double *x, double mu, double alpha, int total_number_of_nodes)
@@ -151,21 +151,21 @@ double OP_Sum_Open(int current_node, double *x, double mu, double alpha, int tot
 		denominator_02 = pow(denominator_01,alpha);
 
 		sum = sum + (numerator/denominator_02);
- 
+
 	}
-			
+
 	return sum;
 }
 
 
 
 /************************************************************************/
-/* Function: OP_Sub_Open												*/
-/* Input: current node, past states vector, alpha, 						*/
-/*							epsilon, Number of nodes 					*/
-/* Return: double 														*/
-/* Description: Calculates the substraction of the lattice dynamics 	*/
-/*				Opens the operation in 2 terms for the advective model	*/
+/* Function: OP_Sub_Open																								*/
+/* Input: current node, past states vector, alpha, 											*/
+/*							epsilon, Number of nodes 																*/
+/* Return: double 																											*/
+/* Description: Calculates the substraction of the lattice dynamics 		*/
+/*				Opens the operation in 2 terms for the advective model				*/
 /************************************************************************/
 
 double OP_Sub_Open(int current_node, double *x, double mu, double alpha, int total_number_of_nodes)
@@ -212,17 +212,8 @@ double OP_Sub_Open(int current_node, double *x, double mu, double alpha, int tot
 		denominator_02 = pow(denominator_01,alpha);
 
 		sum = sum + (numerator/denominator_02);
- 
+
 	}
-			
+
 	return sum;
 }
-
-
-
-
-
-
-
-
-
